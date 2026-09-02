@@ -1,0 +1,23 @@
+generated: '2026-09-02'
+method: searched
+source: https://developer.aep.com/apis
+status: none
+note: >-
+  No MCP server. American Electric Power publishes no hosted/remote MCP endpoint and no
+  stdio MCP package under any registry, and there is no public OpenAPI to derive a candidate
+  tool list from — the only machine-readable contract surface AEP operates
+  (Azure API Management, developer.aep.com / api.aep.com) exposes zero APIs anonymously.
+  No MCPServer pointer is wired in apis.yml: this file records an absence.
+deployment:
+  mode: none
+  auth: unknown
+  verified: searched
+tools: []
+evidence:
+  - url: https://developer.aep.com/developer/apis?api-version=2022-04-01-preview
+    status: 200
+    finding: 'empty API list: {"value":[],"nextLink":null} — nothing to derive tools from'
+  - url: https://www.aep.com/llms.txt
+    status: 404
+    finding: no llms.txt, so no published tool list to fall back to
+checked: '2026-09-02'

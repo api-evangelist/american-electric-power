@@ -1,0 +1,93 @@
+generated: '2026-09-02'
+method: probed
+source: >-
+  Live unauthenticated HTTP probes of the named /.well-known/ path list on every American
+  Electric Power host we could identify: the corporate site, the Azure API Management
+  developer portal, the Azure API Management gateway, and the five operating-company sites.
+note: >-
+  Every named path returned 404 on every host. No WellKnown or SecurityTxt pointer is wired
+  in apis.yml, because this file records an ABSENCE — nothing here is a document AEP serves.
+  www.aep.com and the operating-company sites answer 404 with a full HTML error page (a
+  Next.js custom 404), developer.aep.com answers 404 with the Azure APIM portal shell, and
+  api.aep.com answers 404 with the Azure APIM JSON envelope
+  '{ "statusCode": 404, "message": "Resource not found" }'.
+hosts:
+  - host: www.aep.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/ai-plugin.json
+        status: 404
+      - path: /.well-known/agent-card.json
+        status: 404
+      - path: /.well-known/agent.json
+        status: 404
+  - host: developer.aep.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/ai-plugin.json
+        status: 404
+      - path: /.well-known/agent-card.json
+        status: 404
+      - path: /.well-known/agent.json
+        status: 404
+  - host: api.aep.com
+    documents:
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+      - path: /.well-known/agent-card.json
+        status: 404
+  - host: www.aepohio.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/agent-card.json
+        status: 404
+  - host: www.aeptexas.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/agent-card.json
+        status: 404
+  - host: www.appalachianpower.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/agent-card.json
+        status: 404
+  - host: www.indianamichiganpower.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/agent-card.json
+        status: 404
+  - host: www.aepenergy.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/agent-card.json
+        status: 404
+checked: '2026-09-02'

@@ -1,0 +1,21 @@
+generated: '2026-09-02'
+method: searched
+source: https://developer.aep.com/apis
+limit_count: 0
+note: >-
+  No rate limits are published. Azure API Management enforces quota and rate-limit policies
+  per product, but AEP exposes zero products and zero APIs to anonymous visitors, so neither
+  the numeric limits nor the response headers are readable without a developer-portal account.
+  Unauthenticated requests to the gateway host api.aep.com return the APIM 404 envelope
+  { "statusCode": 404, "message": "Resource not found" } and carry no RateLimit-*,
+  X-RateLimit-* or Retry-After headers, so nothing could be observed live either.
+rate_limits: []
+headers_observed: []
+evidence:
+  - url: https://developer.aep.com/developer/apis?api-version=2022-04-01-preview
+    status: 200
+    finding: 'empty API list: {"value":[],"nextLink":null}'
+  - url: https://api.aep.com/
+    status: 404
+    finding: Azure APIM gateway 404 envelope; no rate-limit headers on the response
+checked: '2026-09-02'

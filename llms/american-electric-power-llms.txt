@@ -1,0 +1,64 @@
+# American Electric Power
+
+> American Electric Power (AEP) is one of the largest electric utilities in the United States,
+> delivering electricity to more than 5.6 million customers across 11 states through regulated
+> subsidiaries including AEP Ohio, AEP Texas, Appalachian Power, Indiana Michigan Power,
+> Kentucky Power, Public Service Company of Oklahoma and Southwestern Electric Power Company.
+> AEP operates the nation's largest electricity transmission network — over 40,000 miles — and
+> roughly 31,000 megawatts of generating capacity.
+
+<!--
+generated: 2026-09-02
+method: generated
+source: apis.yml + live probes of aep.com, developer.aep.com and api.aep.com (2026-09-02)
+note: AEP does not publish an llms.txt. https://www.aep.com/llms.txt returns 404. This file is
+      written by API Evangelist from the catalog record and from probes we ran ourselves; it is
+      NOT a document American Electric Power serves.
+-->
+
+## API surface
+
+AEP operates a real API program, but it is not publicly readable.
+
+- [AEP API Management developer portal](https://developer.aep.com/): Azure API Management
+  developer portal, branded "AEP API Management" and footed "Powered by AEP Integration COE".
+  Backing instance `apim-aep-prod-use2-001` (confirmed at https://developer.aep.com/config.json).
+- [APIs list](https://developer.aep.com/apis): the catalog page. The anonymous data call behind
+  it, `GET /developer/apis?api-version=2022-04-01-preview`, returns `{"value":[],"nextLink":null}`
+  — zero APIs are visible without a portal account.
+- [Products list](https://developer.aep.com/products): likewise returns an empty product set
+  anonymously, so no plan, quota or price is published.
+- [Sign up](https://developer.aep.com/signup) / [Sign in](https://developer.aep.com/signin):
+  a developer-portal account is required before any API, operation or specification is shown.
+- API gateway host: `https://api.aep.com` — a live Azure API Management gateway (APIM
+  `x-ms-request-id` headers behind an F5 WAF). Unauthenticated requests return
+  `{ "statusCode": 404, "message": "Resource not found" }`. No route is anonymously reachable.
+
+## What is NOT published
+
+- No OpenAPI, Swagger, GraphQL SDL, AsyncAPI, gRPC/Protobuf or WSDL contract at any public URL.
+- No MCP server (hosted or stdio) and no A2A agent card.
+- No `/.well-known/` documents on any AEP host: security.txt, api-catalog, openid-configuration,
+  oauth-authorization-server, ai-plugin.json, agent-card.json and agent.json all 404 on
+  www.aep.com, developer.aep.com, api.aep.com and the operating-company sites.
+- No first-party SDK, CLI or client library in npm, PyPI, Maven Central, NuGet, RubyGems,
+  crates.io or pkg.go.dev.
+- No published rate limits, API changelog, status page, deprecation policy or vulnerability
+  disclosure program.
+
+## Customer data access
+
+Customer-authorized energy-usage data at AEP operating companies is shared through Green Button
+Connect My Data (the NAESB ESPI profile) rather than through a first-party developer API. That
+surface is customer-consent and portal driven; AEP publishes no ESPI contract of its own.
+
+## Company
+
+- [AEP.com](https://www.aep.com/)
+- [About AEP](https://www.aep.com/about/)
+- [News](https://www.aep.com/news/)
+- [Investors](https://www.aep.com/investors/)
+- [Contact](https://www.aep.com/contact/)
+- [Terms & Conditions](https://www.aep.com/terms/)
+- [Privacy Notice](https://www.aep.com/privacy/)
+- [LinkedIn](https://www.linkedin.com/company/american-electric-power)

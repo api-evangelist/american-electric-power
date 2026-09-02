@@ -42,7 +42,48 @@ accessModel:
   method: derived
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/american-electric-power.png
 access: 3rd-Party
-apis: []
+apis:
+  - aid: american-electric-power-api-management
+    name: AEP API Management
+    description: >-
+      American Electric Power operates an Azure API Management instance
+      (apim-aep-prod-use2-001) fronted by the "AEP API Management" developer portal at
+      developer.aep.com and the gateway host api.aep.com. The portal is public and the
+      gateway is live, but the anonymous catalog is empty: GET
+      /developer/apis?api-version=2022-04-01-preview returns {"value":[],"nextLink":null},
+      and so does the products listing. Every API, operation and specification is visible
+      only after a developer-portal account is created and approved, so no machine-readable
+      contract could be captured.
+    humanURL: https://developer.aep.com/apis
+    baseURL: https://api.aep.com
+    tags:
+      - API Management
+      - Energy
+      - Electric Utility
+    properties:
+      - type: DeveloperPortal
+        url: https://developer.aep.com/
+      - type: SignUp
+        url: https://developer.aep.com/signup
+      - type: Plans
+        url: plans/american-electric-power-plans-pricing.yml
+      - type: RateLimits
+        url: rate-limits/american-electric-power-rate-limits.yml
+    x-discovery:
+      portal_software: Azure API Management developer portal
+      apim_instance: apim-aep-prod-use2-001
+      config: https://developer.aep.com/config.json
+      anonymous_api_count: 0
+      anonymous_product_count: 0
+      gateway_probe:
+        url: https://api.aep.com/
+        status: 404
+        body: '{ "statusCode": 404, "message": "Resource not found" }'
+        note: >-
+          Azure APIM gateway envelope with x-ms-request-id / x-ms-correlation-id headers
+          behind an F5 WAF, on AEP's own domain — a real AEP-operated API gateway with no
+          anonymously reachable route.
+      checked: '2026-09-02'
 common:
   - type: DomainSecurity
     url: security/american-electric-power-domain-security.yml
@@ -50,9 +91,32 @@ common:
     url: https://www.linkedin.com/company/american-electric-power
   - type: Website
     url: https://www.aep.com
-  - type: Portal
-    url: https://www.aep.com/about
+  - type: About
+    url: https://www.aep.com/about/
     name: About AEP
+  - type: DeveloperPortal
+    url: https://developer.aep.com/
+    name: AEP API Management developer portal
+  - type: SignUp
+    url: https://developer.aep.com/signup
+    name: Developer portal sign up
+  - type: Login
+    url: https://developer.aep.com/signin
+    name: Developer portal sign in
+  - type: Support
+    url: https://www.aep.com/contact/
+    name: Contact AEP
+  - type: Blog
+    url: https://www.aep.com/news/
+    name: AEP News
+  - type: TermsOfService
+    url: https://www.aep.com/terms/
+    name: Terms & Conditions
+  - type: PrivacyPolicy
+    url: https://www.aep.com/privacy/
+    name: Privacy Notice
+  - type: LLMsTxt
+    url: llms/american-electric-power-llms.txt
   - type: Features
     data:
       - name: Electricity Transmission
@@ -125,8 +189,34 @@ common:
           Integration with customer-owned solar and distributed generation systems
           through net metering programs across AEP operating companies.
 created: '2024-11-15'
-modified: '2026-04-19'
+modified: '2026-09-02'
 maintainers:
   - FN: Kin Lane
     email: info@apievangelist.com
 specificationVersion: '0.23'
+
+x-enrichment:
+  date: '2026-09-02'
+  status: minimal
+  artifacts_added: 5
+  pass: local-v1
+
+x-coverage:
+  state: gated
+  reason: partner-login
+  detail: >-
+    AEP runs a live Azure API Management program — portal at developer.aep.com, gateway at
+    api.aep.com — but its anonymous catalog call
+    GET /developer/apis?api-version=2022-04-01-preview returns an empty {"value":[]} list, so
+    every API, operation and specification is invisible until a developer-portal account is
+    created and approved.
+  evidence:
+    - url: https://developer.aep.com/developer/apis?api-version=2022-04-01-preview
+      status: 200
+    - url: https://developer.aep.com/developer/products?api-version=2022-04-01-preview
+      status: 200
+    - url: https://api.aep.com/
+      status: 404
+    - url: https://www.aep.com/.well-known/api-catalog
+      status: 404
+  checked: '2026-09-02'

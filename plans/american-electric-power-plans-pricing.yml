@@ -1,0 +1,21 @@
+generated: '2026-09-02'
+method: searched
+source: https://developer.aep.com/products
+plan_count: 0
+note: >-
+  American Electric Power publishes no API plans or pricing. Its API program runs on an Azure
+  API Management instance (apim-aep-prod-use2-001) whose developer portal is live at
+  developer.aep.com, but the anonymous product listing
+  (GET /developer/products?api-version=2022-04-01-preview) returns
+  {"value":[],"nextLink":null} — zero products are visible without a portal account, so no
+  tier, quota, or price is published. This is an internal/partner integration gateway, not a
+  commercial API product line; there is no public plan surface to record.
+plans: []
+evidence:
+  - url: https://developer.aep.com/developer/products?api-version=2022-04-01-preview
+    status: 200
+    finding: 'empty product list: {"value":[],"nextLink":null}'
+  - url: https://developer.aep.com/products
+    status: 200
+    finding: Azure APIM portal SPA shell; product grid renders only for signed-in users
+checked: '2026-09-02'
