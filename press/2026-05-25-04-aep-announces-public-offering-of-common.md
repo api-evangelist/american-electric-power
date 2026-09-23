@@ -1,7 +1,9 @@
 ---
 title: AEP ANNOUNCES PUBLIC OFFERING OF COMMON ...
 url: https://www.prnewswire.com/news-releases/aep-announces-public-offering-of-common-stock-with-a-forward-component-302770068.html
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"American Electric Power" press release artificial intelligence'
 position: 4
 source: serpapi-google

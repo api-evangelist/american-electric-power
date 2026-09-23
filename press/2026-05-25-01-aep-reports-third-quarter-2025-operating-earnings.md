@@ -1,7 +1,9 @@
 ---
 title: AEP Reports Third-Quarter 2025 Operating Earnings ...
 url: https://www.aep.com/news/stories/view/10534/
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"American Electric Power" press release artificial intelligence'
 position: 1
 source: serpapi-google
