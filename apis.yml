@@ -78,6 +78,10 @@ apis:
         WAF, on AEP's own domain — a real AEP-operated API gateway with no anonymously reachable route.
     checked: '2026-09-02'
 common:
+- type: Plans
+  url: plans/american-electric-power-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/american-electric-power-rate-limits.yml
 - type: DomainSecurity
   url: security/american-electric-power-domain-security.yml
 - type: LinkedIn
