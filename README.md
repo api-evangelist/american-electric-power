@@ -1,4 +1,4 @@
-# American Electric Power (american-electric-power)
+# American Electric Power
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,57 +66,98 @@
 
 American Electric Power (AEP) is one of the largest electric utilities in the United States, delivering electricity to more than 5.6 million customers across 11 states through its regulated utility subsidiaries including AEP Ohio, AEP Texas, Appalachian Power, Indiana Michigan Power, Kentucky Power, Public Service Company of Oklahoma, and Southwestern Electric Power Company. AEP operates the nation's largest electricity transmission network spanning over 40,000 miles and maintains approximately 31,000 megawatts of generating capacity.
 
-**URL:** [https://www.aep.com](https://www.aep.com)
+**Areas:** Energy · Electric Utility · Power · Electricity · Transmission · Generation · Fortune 500
 
-**Run:** [Capabilities Using Naftiko](https://github.com/naftiko/fleet?utm_source=api-evangelist&utm_medium=readme&utm_campaign=company-api-evangelist&utm_content=repo)
+## American Electric Power on APIs.io
 
-## Tags:
+Everything profiled for American Electric Power is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/american-electric-power/](https://apis.io/providers/american-electric-power/)** — or go straight to one of the APIs or properties below.
 
- - Energy, Electric Utility, Power, Electricity, Transmission, Generation
+### APIs (1)
 
-## Timestamps
+- [AEP API Management](https://apis.io/apis/american-electric-power/american-electric-power-api-management/) — American Electric Power operates an Azure API Management instance (apim-aep-prod-use2-001) fronted by the "AEP API Management" developer portal at…
 
-- **Created:** 2024-11-15
-- **Modified:** 2026-04-19
+### Published properties
 
-## Common Properties
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Security (1)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [American Electric Power Domain Security](https://apis.io/security/american-electric-power/american-electric-power-domain-security/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [American Electric Power Plans Pricing](https://apis.io/plans/american-electric-power/american-electric-power-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [American Electric Power Rate Limits](https://apis.io/rate-limits/american-electric-power/american-electric-power-rate-limits/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://www.aep.com)
-- [About AEP](https://www.aep.com/about)
+- [Sign up](https://developer.aep.com/signup)
+- [Support](https://www.aep.com/contact/)
+- [Blog](https://www.aep.com/news/)
+- [Terms of service](https://www.aep.com/terms/)
+- [Privacy policy](https://www.aep.com/privacy/)
 
-## Features
+## API Evangelist rating
 
-| Name | Description |
-|------|-------------|
-| Electricity Transmission | AEP operates the largest electricity transmission network in the nation, spanning more than 40,000 miles across its 11-state service territory. |
-| Electric Power Generation | Approximately 31,000 megawatts of diverse generating capacity including coal, natural gas, nuclear, wind, and solar energy sources. |
-| Regulated Utility Services | Regulated electric distribution and customer service through seven operating utility subsidiaries serving residential, commercial, and industrial customers. |
-| Energy Solutions for Business | Commercial and industrial energy management, demand response programs, and customized energy solutions for large business customers. |
-| Economic Development Support | Site selection assistance, regional resource analysis, and energy infrastructure planning to support economic development across AEP's service territory. |
-| Renewable Energy Programs | Renewable energy options and clean energy transition programs for customers seeking sustainable electricity solutions. |
-| Outage Management | Real-time outage reporting, tracking, and restoration services for residential and business customers across all operating company service territories. |
-| Smart Grid Infrastructure | Advanced metering infrastructure and smart grid investments to improve reliability and enable future energy management capabilities. |
+**Kin Score 17.2** — emerging · rubric 0.24.0 · scored 2026-10-17
 
-## Use Cases
+| Facet | Score |
+|---|---|
+| Discoverability | 73.2 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 16.7 |
+| Access clarity | 34.2 |
 
-| Name | Description |
-|------|-------------|
-| Residential Electricity Service | Providing reliable electric service, billing, outage management, and energy efficiency programs to homeowners and renters across 11 states. |
-| Commercial and Industrial Power | Meeting the high-voltage, high-capacity power needs of commercial businesses and industrial manufacturers with reliable transmission and distribution. |
-| Renewable Energy Procurement | Enabling large customers and businesses to procure renewable energy and meet their sustainability and corporate ESG goals. |
-| Economic Development | Supporting businesses evaluating new facility locations with energy cost, capacity, and infrastructure data for AEP service territories. |
-| Energy Efficiency Programs | Delivering rebate programs and energy efficiency resources to help customers reduce consumption and lower their electricity costs. |
+**Agent readiness 2.5** — human-only
 
-## Integrations
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
 
-| Name | Description |
-|------|-------------|
-| Green Button Connect | AEP operating companies participate in the Green Button initiative, enabling customers to download or share their energy usage data with authorized third-party applications. |
-| Demand Response Programs | Integration with grid operators (PJM, MISO, SPP) for demand response and ancillary services markets. |
-| Net Metering | Integration with customer-owned solar and distributed generation systems through net metering programs across AEP operating companies. |
+**Regulatory alignment 11.5** — Energy & Utilities
 
-## Maintainers
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/american-electric-power/](https://apis.io/providers/american-electric-power/).
 
-**FN:** Kin Lane
+## How this profile is made
 
-**Email:** info@apievangelist.com
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for American Electric Power: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/american-electric-power/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
